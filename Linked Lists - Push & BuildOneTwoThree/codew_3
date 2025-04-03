@@ -7,16 +7,28 @@ class Node:
 def push(head, data):
     """
     pushes nodes
+
+    >>> push(None, 1).data
+    1
+    >>> push(Node(1), 2).next.data
+    1
     """
-    # Your code goes here.
-    return Node(None)
+    new_node = Node(data)
+    new_node.next = head
+    return new_node
 
 def build_one_two_three():
     """
     bilds a string of linked nodes
+
+    >>> build_one_two_three().next.data
+    2
     """
-    # Your code goes here.
-    return Node(None)
+    head = None
+    head = push(head, 3)
+    head = push(head, 2)
+    head = push(head, 1)
+    return head
 
 if __name__ == '__main__':
     import doctest
