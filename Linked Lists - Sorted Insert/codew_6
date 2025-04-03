@@ -10,9 +10,19 @@ def sorted_insert(head, data):
     inserts a node into the correct location \
 of a pre-sorted linked list which is sorted in ascending order
     """
-    # Your code goes here.
-    # Make sure to return the head of the list.
-    ...
+    new = Node(data)
+    if head is None or data < head.data:
+        new.next = head
+        return new
+
+    current = head
+    while current.next and current.next.data < data:
+        current = current.next
+
+    new.next = current.next
+    current.next = new
+
+    return head
 
 
 if __name__ == '__main__':
