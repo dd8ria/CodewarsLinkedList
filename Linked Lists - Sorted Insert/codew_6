@@ -1,1 +1,20 @@
+"""code for sorted insert"""
 
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def sorted_insert(head, data):
+    """
+    inserts a node into the correct location \
+of a pre-sorted linked list which is sorted in ascending order
+    """
+    # Your code goes here.
+    # Make sure to return the head of the list.
+    ...
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
