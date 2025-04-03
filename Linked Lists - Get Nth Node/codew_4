@@ -1,1 +1,31 @@
+"""code for het nth node"""
 
+class Node:
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+def get_nth(node, index):
+    """
+    takes a linked list and an int index and \
+returns the node stored at the Nth index position
+
+    >>> linked_list = Node(1, Node(2, Node(3, None)))
+    >>> get_nth(linked_list, 0).data
+    1
+    >>> get_nth(linked_list, 2).data
+    3
+    """
+    current = node
+    i = 0
+
+    while current:
+        if i == index:
+            return current
+        current = current.next
+        i += 1
+    raise IndexError
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
