@@ -15,7 +15,11 @@ def move_node(source, dest):
     takes the node from the front of the source \
 list and moves it to the front of the destintation list
     """
-    ...
+    if source.head is None:
+        raise ValueError
+    source.next = dest.head
+    dest.head = source
+    return Context(source, dest)
 
 
 if __name__ == '__main__':
