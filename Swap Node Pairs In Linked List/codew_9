@@ -12,7 +12,20 @@ list, then returns the head node of the list
     >>> swap_pairs(A --> B --> C --> D)
     (B --> A --> D --> C)
     """
-    ...
+    fake = Node(0)
+    fake.next = head
+    prev = fake
+
+    while head and head.next:
+        first = head
+        second = head.next
+        prev.next = second
+        first.next = second.next
+        second.next = first
+        prev = first
+        head = first.next
+
+    return fake.next
 
 
 if __name__ == '__main__':
