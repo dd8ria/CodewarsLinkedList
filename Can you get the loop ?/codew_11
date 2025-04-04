@@ -20,7 +20,15 @@ def loop_size(node):
     >>> loop_size(node1)
     3
     """
-    ...
+    nodes = []
+    current = node
+
+    while current not in nodes:
+        nodes.append(current)
+        current = current.next
+
+    start_index = nodes.index(current)
+    return len(nodes) - start_index
 
 if __name__ == '__main__':
     import doctest
