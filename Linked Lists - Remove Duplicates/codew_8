@@ -10,7 +10,14 @@ def remove_duplicates(head):
     func which takes a list sorted in increasing \
 order and deletes any duplicate nodes from the list
     """
-    ...
+    if head is None:
+        return head
+    current = head
+    while current.next:
+        if current.data == current.next.data:
+            current.next = current.next.next
+        current = current.next
+    return head
 
 
 if __name__ == '__main__':
