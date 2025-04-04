@@ -1,1 +1,23 @@
+"""code for alternating split"""
 
+class Node(object):
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+class Context(object):
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+
+def alternating_split(head):
+    """
+    func that takes one list and divides \
+up its nodes to make two smaller lists
+    """
+    ...
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
