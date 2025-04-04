@@ -1,1 +1,20 @@
+"""code for swap node pairs in linked list"""
 
+class Node:
+    def __init__(self, next=None):
+        self.next = next
+
+def swap_pairs(head):
+    """
+    method that swaps each pair of nodes in the \
+list, then returns the head node of the list
+
+    >>> swap_pairs(A --> B --> C --> D)
+    (B --> A --> D --> C)
+    """
+    ...
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
