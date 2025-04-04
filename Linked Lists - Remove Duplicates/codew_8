@@ -1,1 +1,18 @@
+"""code for remove duplicates"""
 
+class Node(object):
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def remove_duplicates(head):
+    """
+    func which takes a list sorted in increasing \
+order and deletes any duplicate nodes from the list
+    """
+    ...
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
