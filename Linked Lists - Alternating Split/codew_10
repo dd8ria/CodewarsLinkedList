@@ -15,7 +15,30 @@ def alternating_split(head):
     func that takes one list and divides \
 up its nodes to make two smaller lists
     """
-    ...
+    if head is None or head.next is None:
+        raise ValueError
+
+    fake_1 = Node()
+    fake_2 = Node()
+    current = head
+    flag = True
+
+    next_f1 = fake_1
+    next_f2 = fake_2
+
+    while current:
+        if flag:
+            next_f1.next = current
+            next_f1 = next_f1.next
+        else:
+            next_f2.next = current
+            next_f2 = next_f2.next
+        flag = not flag
+        current = current.next
+    next_f1.next = None
+    next_f2.next = None
+
+    return Context(fake_1.next, fake_2.next)
 
 
 if __name__ == '__main__':
